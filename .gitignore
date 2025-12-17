@@ -1,0 +1,29 @@
+# Dependencies
+/node_modules
+/.pnpm-store
+
+# pnpm-specific
+.npmrc
+pnpm-debug.log*
+.pnpm-state.json
+
+# Production
+npm-shrinkwrap.json
+package-lock.json
+yarn.lock
+
+# IDE/Editor files
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
+.DS_Store
+
+# Build files
+/build
+/dist
+/tmp
+*.log
+*.tgz
