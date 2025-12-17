@@ -18,3 +18,5 @@ export class ConsoleLogger implements Logger {
     console.debug(`${date} | DEBUG | ${message}`);
   }
 }
+
+export const logger = new ConsoleLogger();
