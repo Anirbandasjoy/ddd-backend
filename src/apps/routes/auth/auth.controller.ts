@@ -15,7 +15,7 @@ export class AuthController {
 
     const createUser = new CreateNewUserUseCase(this.deps.userRepository, this.deps.hasPassword);
 
-    const user = await createUser.execute({ name, email, password });
+    const user = await createUser.execute({ id: crypto.randomUUID(), name, email, password });
 
     logger.info('User created successfully');
 
