@@ -5,3 +5,4 @@ export * from './errors/AppError';
 export * from './utils/catchAsync';
 export * from './utils/responseSender';
 export * from './middlewares/errorHandler';
+export * from './middlewares/zod_validation_middleware';

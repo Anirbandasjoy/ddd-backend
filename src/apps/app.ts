@@ -26,7 +26,7 @@ app.get('/health', (_req: Request, res: Response) => {
 
 app.use((req: Request, res: Response, _next: NextFunction) => {
   const error = AppError.NOT_FOUND(`API Route not found: ${req.originalUrl}`);
-  error.meta = { method: req.method, path: req.originalUrl };
+  error.meta = { method: req.method, path: req.originalUrl,  };
   ResponseSender.error({ res, error: error });
 });
 

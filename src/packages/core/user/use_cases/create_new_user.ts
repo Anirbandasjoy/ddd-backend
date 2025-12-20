@@ -9,12 +9,15 @@ export class CreateNewUserUseCase {
     private readonly hashPassword: HashPassword
   ) {}
 
+  // Create New UserDTO to add id field use
+
   async execute(dto: CreateNewUserDTO) {
     const existingUser = await this.userRepository.findByEmail(dto.email);
     if (existingUser) {
       logger.error('User already exists');
       throw AppError.CONFLICT('User already exists');
     }
+
     const hashedPassword = await this.hashPassword.hash(dto.password);
     const user = await this.userRepository.create({
       ...dto,

@@ -10,6 +10,7 @@ export interface IApiErrorResponse {
   message: string;
   statusCode: number;
   code?: string;
+  errors?: Array<{ path: string; message: string; code: string }>;
   meta?: Record<string, any>;
   stack?: string;
 }
